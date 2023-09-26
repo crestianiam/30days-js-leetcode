@@ -1,26 +1,17 @@
-const log = (...values) => {
-    let finalString = values.join(" "); // Unisci gli elementi con uno spazio
-    finalString = finalString.trim(); // Rimuovi gli spazi all'inizio e alla fine
-    console.log(finalString);
-}
+const desserts = [
+    {
+        title: 'Chocolate Cake',
+        description: 'Chocolate cake is a cake flavored with melted chocolate',
+        calories: 500,
+    }
+];
 
-let x = {
-    age: 65,
-    name: "bob",
+const newDesserts = desserts.map((dessert) => {
+    return {
+        title: dessert.title.toUpperCase(),
+        ...dessert,
+        kCal: dessert.calories / 1000,
+    };
+});
 
-}
-
-let y = {
-    age: 65,
-    name: "bob",
-
-}
-let z = x
-let t = x
-z.age = 33
-
-console.log(x)
-
-console.log(t === z)
-
-
+console.log(newDesserts)

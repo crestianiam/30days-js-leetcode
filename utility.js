@@ -1,7 +1,26 @@
-export const log = (...values) => {
-    let finalString = values.join(" "); // Unisci gli elementi con uno spazio
-    finalString = finalString.trim(); // Rimuovi gli spazi all'inizio e alla fine
-    console.log(finalString);
+const increment = (init) => {
+    let currentValue = init
+    return (incrementer) => {
+        currentValue = currentValue + incrementer
+        return currentValue
+    }
 }
 
-log(3, "ciao", 3 + 5)
+
+let x = increment(2)
+/* 
+console.log(x(1))
+console.log(x(5))
+console.log(x(2)) */
+
+const test = () => {
+    let x = 0
+    return () => {
+        x++
+        console.log(x)
+
+    }
+}
+
+test()
+test()
