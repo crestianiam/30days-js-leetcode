@@ -15,3 +15,10 @@ const createCounter = (init) => {
     )
 }
 
+let x = createCounter(5)
+console.log(x.increment())
+console.log(x.increment())
+console.log(x.reset())
+console.log(x.decrement())
+console.log(x.increment())
+console.log(x.decrement())
